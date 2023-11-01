@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coffee Counter</h1>
+    <p>Espresso: <span id="espressoCount">0</span></p>
+    <p>Americano: <span id="americanoCount">0</span></p>
+    <p>Cappuccino: <span id="cappuccinoCount">0</span></p>
+    <p>Latte: <span id="latteCount">0</span></p>
+    <p>Raf: <span id="rafCount">0</span></p>
+    <p>Syrup: <span id="syrupCount">0</span></p>
+    <button onclick="incrementCount('espressoCount')">+ Espresso</button>
+    <button onclick="incrementCount('americanoCount')">+ Americano</button>
+    <button onclick="incrementCount('cappuccinoCount')">+ Cappuccino</button>
+    <button onclick="incrementCount('latteCount')">+ Latte</button>
+    <button onclick="incrementCount('rafCount')">+ Raf</button>
+    <button onclick="incrementCount('syrupCount')">+ Syrup</button>
+
+    <script>
+        function incrementCount(countId) {
+            const countElement = document.getElementById(countId);
+            const currentCount = parseInt(countElement.innerText);
+            countElement.innerText = currentCount + 1;
+        }
+    </script>
+</body>
+</html>
